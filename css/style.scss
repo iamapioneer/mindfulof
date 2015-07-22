@@ -1,0 +1,910 @@
+@import 'bourbon/_bourbon.scss';
+
+//Variables
+$primary : #30B77D;
+$dark : #383838;
+$light : #E6E6E6;
+$margin : 70%;
+$text-color:#464646;
+
+$montserrat : 'Montserrat', Helvetica, sans-serif;
+$helvetica : 'HelveticaNeue', 'Helvetica Neue', 'Helvetica-Neue', Helvetica, Arial, sans-serif;
+
+//Mixins
+@mixin center {
+	position: absolute;
+	top:50%;
+	left:50%;
+	@include transform(translate(-50%,-50%));
+}
+
+@mixin stretch {
+	width:100%;
+	height:100%;
+}
+
+@mixin centerLeft {
+	position: absolute;
+	top:50%;
+	left:0;
+	@include transform(translate(0%,-50%));
+}
+
+@mixin centerRight {
+	position: absolute;
+	top:50%;
+	right:0;
+	@include transform(translate(0%,-50%));
+}
+
+@mixin centerHorizontal {
+	position: absolute;
+	left:50%;
+	@include transform(translate(-50%, 0%));
+
+}
+
+@mixin breakpoint($point) {
+	@if $point == small {
+    	@media (max-width: 500px) { @content; }
+	}
+	@else if $point == medium {
+    	@media (max-width: 1250px) { @content; }
+	}
+	@else {
+		@media (max-width: $point) { @content; }
+	}
+  
+}
+
+//Helpers
+
+.primary {
+	color:$primary;
+}
+.primary-bg {
+	background-color: $primary;
+	color:white;
+}
+.dark {
+	color:$dark;
+}
+.dark-bg {
+	background-color: $dark;
+	color:white;
+}
+.light {
+	color:$light;
+}
+.light-bg {
+	background-color: $light;
+	color:#464646;
+}
+.white {
+	color:white;
+}
+
+//Main
+
+
+.nav {
+	position: fixed;
+	width:$margin;
+	height:50px;
+	left:50%;
+	@include transform(translate(-50%, 0%));
+	top:30px;
+	z-index:9;
+
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+
+	li {
+		float:left;
+		font-family: $montserrat;
+		color:white;
+		text-transform: uppercase;
+		font-size: 1rem;
+		width:16.5%;
+		text-align: center;
+		line-height: 50px;
+		position: relative;
+
+		@include breakpoint(650px) {
+			font-size: .8rem;
+		}
+	}
+
+	#contact-link {
+		cursor:pointer;
+	}
+
+	.slash {
+		@include center;
+		width:40%;
+		height:3px;
+		background-color: white;
+	}
+	#sounds-slash {
+		width:75px;
+	}
+	#dj-slash {
+		width:40px;
+	}
+	#producer-slash {
+		width:100px;
+	}
+	#social-slash {
+		width:70px;
+	}
+	#home-slash {
+		width:60px;
+	}
+
+	@include breakpoint(1000px) {
+		width:90%;
+	}
+
+	@include breakpoint(550px) {
+		display: none;
+	}
+
+}
+
+#contact-appear {
+	position: absolute;
+	top:115%;
+	right:0;
+	font-family: $montserrat;
+	color:white;
+	text-transform: uppercase;
+	font-size: 1rem;
+	text-align: right;
+	display: none;
+
+	a {
+		color:white;
+	}
+
+}
+
+.mobile-nav {
+	display: none;
+	position: fixed;
+	width:100%;
+	height:100%;
+	background-color: rgba(48, 48, 48, 0.9);
+	z-index: 9;
+	@include box-sizing(border-box);
+	padding: 35px;
+
+	li {
+		font-family: $montserrat;
+		color:white;
+		text-transform: uppercase;
+		font-size: 2.3rem;
+		margin-bottom: 10px;
+		position: relative;
+	}
+	.slash {
+		@include centerLeft;
+		width:40%;
+		height:3px;
+		background-color: white;
+	}
+
+	#home-slash-m {
+		width: 125px;
+	}
+
+	#sounds-slash-m {
+		width:165px;
+	}
+
+	#dj-slash-m {
+		width:50px;
+	}
+
+	#producer-slash-m {
+		width:220px;
+	}
+
+	#social-slash-m {
+		width:140px;
+	}
+
+
+}
+
+#mobile-nav-trigger {
+	display: none;
+	position: fixed;
+	top:30px;
+	left:30px;
+	width:70px;
+	z-index: 8;
+	cursor:pointer;
+
+	@include breakpoint(550px) {
+		display: block;
+	}
+
+}
+
+#mobile-nav-hide {
+	display: none;
+	position: fixed;
+	top:40px;
+	right:40px;
+	width:30px;
+	cursor: pointer;
+	z-index: 10;
+}
+
+
+
+
+
+.hidden {
+	
+}
+.visible {
+	
+}
+
+.hero-main {
+	width:100%;
+	height:100%;
+	// background-image: url(../img/hero-main.jpg);
+	background-size: cover;
+	background-position: top left;
+
+	.wordmark {
+		@include center;
+		left:30%;
+		top:35%;
+
+		font-size: 5rem;
+		font-family: $helvetica;
+		font-weight: bold;
+		letter-spacing: -1px;
+
+		.of {
+			color:$dark;
+
+			@include breakpoint(725px) {
+				color:$light;
+			}
+
+
+		}
+
+		@include breakpoint(725px) {
+			@include center;
+		}
+
+		@include breakpoint(450px) {
+			font-size: 3rem;
+		}
+
+	}
+
+
+	@include breakpoint(725px) {
+		background-position: center;
+	}
+}
+
+.row-main {
+	height:auto;
+	width:100%;
+	position: relative;
+	overflow: auto;
+}
+.photo-module-main {
+	width:65%;
+	height:100%;
+	float:left;
+
+	background-size: cover;
+	background-position: center;
+
+
+}
+.info-module-main {
+	width:35%;
+	float:left;
+	position: relative;
+
+	p {
+		@include center;
+		font-family: $montserrat;
+		font-size: 1.3rem;
+
+		@include breakpoint(550px) {
+			font-size: .8rem;
+		}
+
+	}
+}
+
+
+
+
+.hero {
+	position: relative;
+	width:100%;
+	height:475px;
+	background-size: cover;
+	background-position: center;
+
+	.page-title {
+		@include centerLeft;
+		left:15%;
+		font-family: $helvetica;
+		color:white;
+		font-size: 6.5rem;
+		font-weight: bold;
+
+		@include breakpoint(550px) {
+			@include center;
+			font-size: 5rem;
+		}
+	}
+
+}
+
+
+
+
+.row-dj {
+	position: relative;
+	width:100%;
+	height:auto;
+	overflow: auto;
+
+	font-family: $montserrat;
+	
+
+	.info-module-small-dj {
+		width:32%;
+		float:left;
+		position: relative;
+		text-transform: uppercase;
+		font-size: 1.2rem;
+
+		div {
+			position: absolute;
+			left:65px;
+			bottom:65px;
+
+			@include breakpoint(1000px) {
+				left:30px;
+				bottom: 30px;
+			}
+
+			@include breakpoint(550px) {
+				left:35px;
+				bottom: 35px;
+			}
+		}
+
+		@include breakpoint(1000px) {
+			font-size: .8rem;
+		}
+
+		@include breakpoint(550px) {
+			width:100%;
+			float:none;
+			font-size: 1.2rem;
+
+		}
+	}
+	.info-module-large-dj {
+		position: relative;
+		width:68%;
+		float:left;
+		font-size: 1.5rem;
+
+		div {
+			position: absolute;
+			right:65px;
+			top:65px;
+			text-align: right;
+
+			@include breakpoint(550px) {
+				right:35px;
+				top:35px;
+			}
+		}
+
+		@include breakpoint(1000px) {
+			font-size: .8rem;
+		}
+
+		@include breakpoint(550px) {
+			width:100%;
+			float:none;
+			font-size: 1.2rem;
+		}
+	}
+}
+
+.row-producer {
+	position: relative;
+	width:100%;
+	height:auto;
+	overflow: auto;
+
+	font-family: $montserrat;
+
+	.info-module-small-producer {
+		width:35%;
+		float:left;
+		position: relative;
+		background-size: cover;
+		background-position: center;
+		cursor:wait;
+	}
+	.info-module-large-producer {
+		position: relative;
+		width:65%;
+		float:left;
+		font-size: 1.5rem;
+		color:white;
+
+		p {
+			@include center;
+		}
+
+		a {
+			color:white;
+		}
+
+		@include breakpoint(550px) {
+			font-size: 1rem;
+		}
+	}
+}
+
+.producer-info {
+	width:100%;
+	height:450px;
+	background-color: $light;
+	position: relative;
+	color:#464646;
+
+	div {
+		font-family: $montserrat;
+		font-size: 1.3rem;
+
+		position: absolute;
+		top:70px;
+		left:70px;
+
+		@include breakpoint(550px) {
+			position: static;
+		}
+	}
+
+	@include breakpoint(550px) {
+		@include box-sizing(border-box);
+		padding: 40px 40px;
+	}
+}
+
+
+.player-section {
+	width:100%;
+	position: relative;
+	height:1000px;
+	overflow: auto;
+
+	.player-container {
+		width:50%;
+		height:100%;
+		float:left;
+		background-color: $dark;
+		position: relative;
+
+		.song-container {
+			@include center;
+			width: 70%;
+			font-family: $montserrat;
+			color:$light;
+			font-size: 1.1rem;
+			
+			@include breakpoint(850px) {
+				font-size: 1rem;
+				width:80%;
+			}
+		}
+
+		@include breakpoint(750px) {
+			width:100%;
+			height:750px;
+			float:none;
+	
+		}
+	}
+	.player-image {
+		width:50%;
+		height:100%;
+		float:left;
+		// background-image: url(../img/sounds-player.jpg);
+		background-size: cover;
+		background-position: center;
+
+		@include breakpoint(750px) {
+			width:100%;
+			height:250px;
+			float:none;
+		}
+	}
+
+
+
+}
+
+.song {
+	overflow: auto;
+	margin: 0 0 75px 0;
+	.name {
+		float:left;
+		cursor:pointer;
+		.button {
+			img {
+				width:14px;
+			}
+			margin-right: 5px;
+
+			.pause-img {
+				display: none;
+			}
+		}
+	}
+	.timestamp {
+		float:right;
+		color:$primary;
+	}
+}
+
+.audio-container {
+	display: none;
+}
+.album-section {
+	width:100%;
+	position: relative;
+	height:400px;
+	background-color: $light;
+
+
+}
+
+.album-container {
+	width:$margin;
+	@include center;
+	overflow: auto;
+	font-family: $montserrat;
+	color:$text-color;
+
+	.album-artwork {
+		width:220px;
+		float:left;
+		margin-right: 20px;
+
+		@include breakpoint(600px) {
+			width: 170px;
+			float:none;
+		}
+	}
+
+	.album-name {
+		font-size: 1.5rem;
+		margin-bottom: 10px;
+
+	}
+
+	.download-button {
+		background-color: $dark;
+		width: 130px;
+		height:35px;
+		float:left;
+		color:$light;
+		text-align:center;
+		line-height: 33px;
+		p {
+
+		}
+	}
+}
+
+.appearances-banner {
+	width:100%;
+	height:90px;
+ 	background-color: $dark;
+ 	position: relative;
+ 	font-family: $montserrat;
+ 	color:$light;
+
+ 	p {
+ 		@include centerLeft;
+ 		left:15%;
+
+ 	}
+
+ 	@include breakpoint(550px) {
+ 		font-size: .8rem;
+ 	}
+
+}
+
+.appearances {
+	width:100%;
+	height:700px;
+	background-color: $light;
+	position: relative;
+
+	.appearances-container {
+		width:100%;
+		@include center;
+		
+	}
+
+	.album-container {
+		position: static;
+		@include transform(translate(0,0));
+		margin: 0 auto;
+
+		&:first-child {
+			margin-bottom: 60px;
+		}
+
+	}
+
+}
+
+
+
+.banner {
+	width:100%;
+	height:80px;
+	background-color: $primary;
+	position: relative;
+
+	.banner-message {
+		font-family: $montserrat;
+		font-size: 1rem;
+		@include centerLeft;
+		left: 15%;
+
+		@include breakpoint(550px) {
+			font-size: .8rem;
+		}
+	}
+}
+
+
+// Social Section 
+
+.media-container {
+	height:auto;
+}
+
+
+.tweets {
+	width:100%;
+	position: relative;
+	height:auto;
+	overflow: auto;
+
+}
+
+.tweet-container {
+	width: 33.333%;
+	position: relative;
+	float:left;
+	font-family: $montserrat;
+	font-size: 1.1rem;
+	padding:4%;
+	@include box-sizing(border-box);
+
+	&:nth-child(2n+1) {
+		background-color: $dark;
+		color:$light;
+
+		a {
+			color:$light;
+		}
+
+	}
+
+	&:nth-child(2n) {
+		background-color: $light;
+		color: $text-color;
+
+		& p:first-child {
+			margin-top: 30%;
+		}
+
+		a {
+			color:$text-color;
+		}
+	}
+
+	@include breakpoint(1000px) {
+		width:50%;
+	}
+
+	@include breakpoint(580px) {
+		width:100%;
+		float:none;
+		padding: 8%;
+	}
+}
+
+.instagram-image {
+	width:33.3333%;
+
+	@include breakpoint(1000px) {
+		width:50%;
+	}
+	@include breakpoint(580px) {
+		width:100%;
+		float:none;
+	}
+}
+
+.social-icon {
+	width:20px;
+
+	@include breakpoint(600px) {
+		width:30px;
+	}
+}
+.social-banner-message {
+	width:$margin;
+	color:white;
+	position: relative;
+
+	a {
+		color:white;
+	}
+
+	p {
+		width: 25%;
+		float:left;
+		text-align: center;
+	}
+
+	.handles {
+
+		@include breakpoint(750px) {
+			display: none;
+		}
+
+	}
+
+	@include breakpoint(600px) {
+		width:90%;
+		left:0 !important;
+	}
+}
+
+.social-body {
+	height:auto;	
+	background-color: $primary;
+}
+
+
+
+
+.footer {
+	width:100%;
+	height:375px;
+	color:white;
+	font-family: $montserrat;
+	font-size: 1.2rem;
+	position: relative;
+	overflow: auto;
+
+	a {
+		color:white;
+	}
+
+	.left {
+		position: absolute;
+		left:70px;
+		bottom:70px;
+
+		@include breakpoint(550px) {
+			position: static;
+			margin-top: 20px;
+		}
+	}
+	.right {
+		position: absolute;
+		right:70px;
+		bottom:70px;
+		text-align: right;
+		font-size: 1rem;
+
+		@include breakpoint(550px) {
+			position: static;
+			text-align: left;
+			margin-top: 20px;
+		}
+	}
+
+	#footer-logo {
+		width:40px;
+
+		@include breakpoint(550px) {
+			display: none;
+		}
+	}
+
+	@include breakpoint(1000px) {
+		height:300px;
+		@include box-sizing(border-box);
+		padding: 40px 40px;
+	}
+}
+
+
+
+
+
+
+
+// Specifics
+
+#dj-hero {
+	// background-image: url(../img/dj-hero.jpg);
+	background-position: 50% 20%;
+
+}
+#dj-hero-2 {
+	height:600px;
+	// background-image: url(../img/dj-hero-2.jpg);
+	background-position: 50% 65%;
+
+	img {
+		@include center;
+		width:155px;
+	}
+}
+
+#producer-hero {
+	// background-image: url(../img/producer-hero.jpg);
+
+	.page-title {
+
+		@include breakpoint(550px) {
+			font-size: 4rem;
+		}
+	}
+}
+
+#sounds-hero {
+	// background-image: url(../img/sounds-hero.jpg);
+	background-position: bottom;
+}
+
+#social-hero {
+	// background-image: url(../img/social-hero.jpg);
+}
+
+.index-link {
+	position: absolute;
+	width:100%;
+	height:100%;
+
+}
+
+
+
+
+
+
+

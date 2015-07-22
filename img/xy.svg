@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="792px" height="792px" viewBox="0 0 792 792" enable-background="new 0 0 792 792" xml:space="preserve">
+<g>
+	<polygon fill="#FFFFFF" points="5.71,1 238.178,1 401.672,252.374 574.602,1 788.172,1 215.503,790 3.828,790 284.477,395.5 	"/>
+	<defs>
+		<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="3.828" y="1" width="784.344" height="789">
+			
+				<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
+			<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+			<feBlend  in="source" in2="back" mode="normal"/>
+		</filter>
+	</defs>
+	<mask maskUnits="userSpaceOnUse" x="3.828" y="1" width="784.344" height="789" id="SVGID_1_">
+		<g filter="url(#Adobe_OpacityMaskFilter)">
+			<polygon fill="#FFFFFF" points="185.716,-474.173 -566.448,583.252 199.1,1127.784 951.271,70.363 			"/>
+		</g>
+	</mask>
+	<polygon mask="url(#SVGID_1_)" fill="#FFFFFF" points="786.283,1 553.814,1 390.328,252.374 217.398,1 3.828,1 576.497,790 
+		788.172,790 507.517,395.5 	"/>
+</g>
+</svg>
