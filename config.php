@@ -1,6 +1,6 @@
 <?php 
 
-	define("BASE_URL" , "http://localhost/mindfulof/");
+	define("BASE_URL" , "http://iammindfulof.com/");
 	define("ROOT_PATH", $_SERVER['DOCUMENT_ROOT']);
 
 ?>
