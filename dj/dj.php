@@ -3,7 +3,7 @@
 <?php include('../header.php'); ?>
 
 
-<div class="hero data-img" id="dj-hero" style="background-image: url();" data-sml="../img/halves/dj-hero-medium.jpg" data-med="../img/halves/dj-hero-medium.jpg" data-lrg="../img/dj-hero.jpg">
+<div class="hero data-img" id="dj-hero" style="background-image: url();background-position:60% 40%;" data-sml="../img/fq-stage.jpg" data-med="../img/fq-stage.jpg" data-lrg="../img/fq-stage.jpg">
 	<p class="page-title">Dj</p>
 </div>
 <div class="row-dj">

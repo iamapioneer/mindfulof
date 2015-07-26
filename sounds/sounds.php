@@ -2,7 +2,7 @@
 <?php $page = 'sounds';?>
 <?php include('../header.php'); ?>
 
-<div class="hero data-img" id="sounds-hero" style="background-image: url();" data-sml="../img/halves/sounds-hero-medium.jpg" data-med="../img/sounds-hero.jpg" data-lrg="../img/sounds-hero.jpg">
+<div class="hero data-img" id="sounds-hero" style="background-image: url(); background-position:50% 40%;" data-sml="../img/fq-outside.jpg" data-med="../img/fq-outside.jpg" data-lrg="../img/fq-outside.jpg">
 	<p class="page-title">Sounds</p>
 </div>
 
@@ -22,7 +22,7 @@
 			<!-- <div class="song" id="song-7-controller"><span class="name play"><span class="button"><img class="play-img" src="<?php //echo BASE_URL ;?>img/play.png"><img class="pause-img" src="<?php //echo BASE_URL ;?>img/pause.png"></span>TOO LONG</span><span class="timestamp"><span class="timeelapsed">0:00</span>/<span class="timetotal">0:00</span></span></div> -->
 		</div>
 	</div>
-	<div class="player-image data-img" style="background-image: url();" data-sml="../img/halves/sounds-player-medium.jpg" data-med="../img/halves/sounds-player-medium.jpg" data-lrg="../img/sounds-player.jpg"></div>
+	<div class="player-image data-img" style="background-image: url();" data-sml="../img/adventure-is-shoot-1.jpg" data-med="../img/adventure-is-shoot-1.jpg" data-lrg="../img/adventure-is-shoot-1.jpg"></div>
 </div>
 
 <div class="audio-container">
