@@ -19,7 +19,7 @@
 	</div>
 	<div class="info-module-large-dj square-sibling dark-bg">
 		<div>
-			<p>$200 minimum for first 4 hours - $55/additional hour.</p>
+			<p>$75/hour.</p>
 			<p>simple, affordable quality.</p>
 		</div>
 	</div>
