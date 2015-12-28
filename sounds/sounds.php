@@ -71,6 +71,12 @@
 
 <div class="appearances">
 	<div class="appearances-container">
+		<a href="https://itun.es/us/x9WU-" target="_blank">
+			<div class="album-container">
+				<img class="album-artwork" src="<?php echo BASE_URL ;?>img/garden-echo.jpg">
+				<p class="album-name">GARDEN ECHO<br>QUIET VOICES<br>(2015)</p>
+			</div>
+		</a>
 		<a href="http://www.wyldmusic.com" target="_blank">
 			<div class="album-container">
 				<img class="album-artwork" src="<?php echo BASE_URL ;?>img/take-flight.jpg">
