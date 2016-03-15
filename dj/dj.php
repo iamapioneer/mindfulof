@@ -19,7 +19,6 @@
 	</div>
 	<div class="info-module-large-dj square-sibling dark-bg">
 		<div>
-			<p>$75/hour.</p>
 			<p>simple, affordable quality.</p>
 		</div>
 	</div>
